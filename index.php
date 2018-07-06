@@ -1,1 +1,3 @@
-<?php echo 'My Line Bot API'; ?>
+<?php 
+  echo 'test'; 
+?>
