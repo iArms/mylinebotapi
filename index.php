@@ -26,6 +26,12 @@ $channel_token = 'MtuO5Zd6bo/VhRyI1Ogmb0K5y0C9bZONXP7EjbyBgVT+Szfj1bNadQBxenEYwc
     } 
 }  */
  
-echo "MyLineApiDEBUG"; 
+// echo "MyLineApiDEBUG"; 
+
+$respMessage = 'Hello, World my name is Narongrit Malila'; 
+$httpClient = new CurlHTTPClient($channel_token);
+$bot = new LINEBot($httpClient, array('channelSecret' => $channel_secret));
+$textMessageBuilder = new TextMessageBuilder($respMessage);
+$response = $bot->replyMessage($replyToken, $textMessageBuilder); 
 
 ?>
